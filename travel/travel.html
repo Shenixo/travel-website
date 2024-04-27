@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <nav>
+        <img src="images\logo.png" class="logo">
+        <ul class="nav-links">
+          <li><a href="#">popular places</a></li>
+          <li><a href="#">travel outside</a></li>
+          <li><a href="#">online packages</a></li>
+        </ul>
+        <a href="#" class="register-btn">register now</a>
+      </nav>
+      <div class="container">
+        <h1>find your next stay</h1>
+        <div class="search-bar">
+          <form>
+              <div class="location-input">
+                <label>location</label>
+                <input type="text" placeholder="where are you going?">
+              </div>
+              <div>
+                <label>check in</label>
+                <input type="text" placeholder="add date">
+              </div>
+              <div>
+                <label>check out</label>
+                <input type="text" placeholder="add date">
+              </div>
+              <div>
+                <label>guest</label>
+                <input type="text" placeholder="add guest">
+              </div>
+                <button type="submit">
+                <img src="images\search.png" >
+                </button>
+              <!-- <div class="search-icon">
+                <img src="images\search.png" >
+              </div> -->
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="container">
+    <h2>Exclusives</h2>
+    <div class="exclusives">
+      <div>
+        <img src="images/image-1.png" alt="">
+      </div>
+      <div>
+        <img src="images/image-2.png" alt="">
+      </div>
+      <div>
+        <img src="images/image-3.png" alt="">
+      </div>
+      <div>
+        <img src="images/image-4.png" alt="">
+      </div>
+      <div>
+        <img src="images/image-5.png" alt="">
+      </div>
+    </div>
+  </section>
+</body>
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+  }
+  header{
+    min-height: 100vh;
+    height: 100%;
+    background: linear-gradient(#0000004d, #0000004d), url(images/banner.png);
+    background-position: center;
+    background-size: cover;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7%;
+  }
+  .logo{
+    width: 140px;
+    cursor: pointer;
+  }
+  .navbar{
+    text-transform: capitalize;
+  }
+  .nav-links li{
+    display: inline-block;
+  }
+  .nav-links li a{
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    margin: 10px 30px;
+    display: inline-block;
+    position: relative;
+  }
+  .nav-links li a::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -3px;
+    transition: .3s;
+  }
+  .nav-links li a:hover::before{
+    width: 80%;
+
+  }
+  .register-btn{
+    background: #ffff;
+    color: black;
+    padding: 8px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  .container{
+    padding: 0 7%;
+  }
+  .container h1{
+    font-size: 4vw;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    padding-top: 22%;
+  }
+  .search-bar{
+    background: white;
+    width: 70%;
+    margin: 30px auto;
+    padding: 6px 10px 6px 30px;
+    border-radius: 50px;
+    text-transform: capitalize;
+  }
+  .search-bar form{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .search-bar form input{
+    background: transparent;
+    border: none;
+    outline: none;
+    display: block;
+    text-transform: capitalize;
+  }
+  .search-bar form button{
+    background: #ff5361;
+    width: 55px;
+    height: 55px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .search-bar form button img{
+    width: 15px;
+  }
+  .location-input{
+    flex: 1;
+  }
+  .search-bar form label{
+    font-weight: 600;
+  }
+  /* exclusives */
+  .container{
+    padding: 70px 0;
+  }
+  .container h2{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .exclusives{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .exclusive div{
+    flex-basis: 50%;
+  }
+  .exclusive div img{
+    width: 100%;
+  }
+</style>
+</html>

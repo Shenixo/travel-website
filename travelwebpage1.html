@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;500;600;700&family=Kaushan+Script&family=Montserrat:wght@400;700&family=Poppins:wght@200;300;400;500;600;700&family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <header>
+    <nav id="navBar">
+      <a href="travelwebpage1.html"><img src="../october/travel/images/logo.png" class="logo"></a>
+        <ul class="nav-links">
+          <li><a href="#" class="active">popular places</a></li>
+          <li><a href="travelwebpage2.html">travel outside</a></li>
+          <li><a href="travelwebpage3.html">travel packages</a></li>
+        </ul>
+        <a href="#" class="register-btn">register now</a>
+        <i class="fa fa-bars" onclick="togglebtn()"></i>
+      </nav>
+    </div>
+    <div class="container">
+      <h1>find your next stay</h1>
+      <div class="search-box">
+        <form>
+          <div class="location">
+            <label>location</label>
+            <input type="text" placeholder="where are you going to?">
+          </div>
+          <div>
+            <label>check in</label>
+            <input type="text" placeholder="add date">
+          </div>
+          <div>
+            <label>check out</label>
+            <input type="text" placeholder="add date">
+          </div>
+          <div>
+            <label>guest</label>
+            <input type="text" placeholder="add guest">
+          </div>
+          <div><button><img src="../october/travel/images/search.png"></button></div>
+        </form>
+      </div>
+    </div>
+  </header>
+  <script>
+    var navBar = document.getElementById('navBar');
+    togglebtn = () =>{
+      navBar.classList.toggle('hidemenu')
+    }
+  </script>
+</body>
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    outline: none;
+    list-style: none;
+  }
+  header{
+    width: 100%;
+    background-image: linear-gradient(rgb(0,0,0,0.5), rgb(0,0,0,0.5)), url(../october/travel/images/banner.png);
+    background-size: cover;
+    background-position: center;
+  }
+  nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7%;
+    text-transform: capitalize;
+  }
+  .logo{
+    width: 140px;
+    cursor: pointer;
+  }
+  nav ul li{
+    display: inline-block;
+    margin: 10px 30px;
+  }
+  nav ul li a{
+    text-decoration: none;
+    color: white;
+  }
+  .register-btn{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: capitalize;
+    background: white;
+    color: black;
+    padding: 8px 20px;
+    border-radius: 30px;
+    white-space: nowrap;
+    z-index: 230;
+  }
+  .container{
+    padding: 0 7%;
+  }
+  .container h1{
+    padding-top: 22%;
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+    font-size: 4vw;
+  }
+  .search-box{
+    width: 70%;
+    background: white;
+    padding: 6px 10px 6px 30px;
+    margin: 30px auto;
+    border-radius: 30px;
+    text-transform: capitalize;
+  }
+  .search-box form{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .search-box form input{
+    display: block;
+    border: none;
+  }
+  .search-box form input::placeholder{
+    text-transform: capitalize;
+  }
+  .search-box form button{
+    width: 55px;
+    height: 55px;
+    background: #ff5361;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .search-box form button img{
+    width: 15px;
+    margin-top: 2px;
+  }
+  .location{
+    flex: 1;
+  }
+  .active{
+    position: relative;
+  }
+  .active::after{
+    display: inline-block;
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -12px;
+    transform: translateX(-50%); 
+    background: white;
+    border-radius: 5px;
+    width: 25px;
+    height: 3px;
+  }
+  .fa-bars{
+    display: none;
+  }
+  @media only screen and (max-width: 700px){
+    .logo{
+      position: fixed;
+      top: 4%;
+      left: 7%;
+      z-index: 200;
+    }
+    nav{
+      z-index: 200;
+      position: fixed;
+      top: 0;
+      background: black;
+      width: 100%;
+      display: inline-block;
+      text-align: right;
+      padding: 100px 7% 0;
+      max-height: 80px;
+      overflow: hidden;
+      transition: max-height .5s;
+    }
+    header{
+      padding-bottom: 200px;
+    }
+    nav .nav-links li{
+      display: block;
+      margin: 10px 0;
+    }
+    .register-btn{
+      margin: 15px 0 30px;
+      display: inline-block;
+    }
+    nav .fa-bars{
+      display: inline-block;
+      position: fixed;
+      color: white;
+      top: 4%;
+      right: 7%;
+      font-size: 28px;
+    }
+    .container h1{
+      padding-top: 200px;
+      font-size: 7vw;
+    }
+    .hidemenu{
+      max-height: 300px;
+    }
+    .search-box form{
+      display: block;
+    }
+    button{
+    left: 50%;
+    transform: translate(-50%, 50%);
+    position: absolute;
+    bottom: -20px;
+   }
+    .search-box{
+      width: 90%;
+      margin: 30px auto;
+      padding: 20px 10px 30px;
+      border-radius: 5px;
+      position: relative;
+    }
+    .search-box form input{
+      width: 100%;
+      border: 1px solid #ddd;
+      margin-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 10px;
+      line-height: 10px;
+    }
+   
+  }
+</style>
+</html>
